@@ -15,11 +15,14 @@ import { FaCopy } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { MdArrowOutward } from "react-icons/md";
 import AboutMe from './AboutMe';
+import Skills from './Skills';
 const LandingPage = () => {
   return (
     <>
       <div className='min-h-screen bg-[#08080a] flex justify-center items-center'>
         <div className="container border-2 min-h-screen pt-14 px-32">
+
+
           <div className="top h-1/3 border flex">
             <div className="left w-2/3 border flex flex-col justify-center text-center py-3">
               <h1 className='font-extrabold text-7xl mb-3 py-7 w-full text-left pl-7 border bg-[#0d0d12]'>Hi, I'm Aakash</h1>
@@ -31,6 +34,8 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
+
+
           <div className="second h-1/3 border flex mt-5">
           <div className='left w-1/2 h-full py-3'>
             <div className="list flex flex-col px-3 py-3 pl-7 gap-7 text-md">
@@ -69,7 +74,7 @@ const LandingPage = () => {
           <AboutMe/>
           <div className='gap bg-[#0c0c11] min-h-14 w-full'></div>
 
-          <div className="third h-1/3 border flex">
+          {/* <div className="third h-1/3 border flex">
             <div className="socials flex flex-wrap w-full">
               <div className='w-1/3 flex gap-1 border hover:bg-[#0c0c11]'>
                 <div className='px-1 py-3 pl-5'><Image src={discord} className='rounded-md' height={50} alt="img not found"/></div>
@@ -96,7 +101,10 @@ const LandingPage = () => {
                 <div className='gap-16 text-xl w-full flex justify-around items-center'><span >Discord</span><MdArrowOutward/></div>
               </div>
             </div>
-          </div>
+          </div> */}
+          <Skills/>
+
+
         </div>
       </div>
     </>
