@@ -1,10 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link';
-import React from 'react'
 import profile from '@/public/p.png'
-import discord from '@/public/discord.webp'
-import github from '@/public/github.webp'
-import linkedin from '@/public/linkedin.webp'
 import { FaCode } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { RiGraduationCapFill } from "react-icons/ri";
@@ -13,24 +9,67 @@ import { MdAccessTimeFilled } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
 import { FaCopy } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
-import { MdArrowOutward } from "react-icons/md";
 import AboutMe from './AboutMe';
 import Skills from './Skills';
+import { ContainerTextFlip } from './ui/container-text-flip';
+import bluetik from '@/public/skills/bluetik.png'
+import Card from './Card';
 const LandingPage = () => {
+  const Experience = [
+    {
+      company: "Afame Technologies",
+      role: "Frontend Dev Intern",
+      timeline: "Apr 2024 - May 2024",
+      title: "Worked as a frontend developer and build a product from scrach."
+    }
+  ]
+  const project = [
+    {
+      title: "Silent Shout",
+      tech: ["Next.js", "prisma"],
+      github: "https://github.com/Silent-Shout.com",
+      live: "https://silent-shout.netlify.app",
+      des: "slfdjs"
+    },
+    {
+      title: "Silent Shout",
+      tech: ["Next.js", "prisma"],
+      github: "https://github.com/Silent-Shout.com",
+      live: "https://silent-shout.netlify.app",
+      des: "slfdjs"
+    },
+    {
+      title: "Silent Shout",
+      tech: ["Next.js", "prisma"],
+      github: "https://github.com/Silent-Shout.com",
+      live: "https://silent-shout.netlify.app",
+      des: "slfdjs"
+    },
+    {
+      title: "Silent Shout",
+      tech: ["Next.js", "prisma"],
+      github: "https://github.com/Silent-Shout.com",
+      live: "https://silent-shout.netlify.app",
+      des: "slfdjs"
+    },
+  ]
   return (
     <>
       <div className='min-h-screen bg-[#08080a] flex justify-center items-center'>
-        <div className="container border-2 min-h-screen pt-14 px-32">
-
-
+        <div className="container min-h-screen pt-14 px-32">
           <div className="top h-1/3 border flex">
-            <div className="left w-2/3 border flex flex-col justify-center text-center py-3">
-              <h1 className='font-extrabold text-7xl mb-3 py-7 w-full text-left pl-7 border bg-[#0d0d12]'>Hi, I'm Aakash</h1>
-              <p className='text-xl pt-3 font-bold text-[#9b9ba3] text-left pl-7'>Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.</p>
-            </div>
-            <div className="right w-1/3 flex justify-center items-center">
+            <div className="left w-1/3 flex justify-center items-center">
               <div className='rounded-full border-2 border-white w-fit overflow-hidden'>
                 <Image className='' src={profile} alt='Img not found' height={270} />
+              </div>
+            </div>
+            <div className="right w-2/3 border flex flex-col justify-center text-center py-3">
+              <div className='flex items-center gap-2'>
+                <h1 className='font-extrabold text-5xl text-left mb-3 py-7 pl-7'>Hi, I'm Aakash</h1>
+                <Image src={bluetik} alt='img not found' className='w-14 h-14 text-center pb-1'/>
+              </div>
+              <div className='text-xl pt-3 font-bold text-[#9b9ba3] text-left pl-7'>Hello, I love to do
+                <ContainerTextFlip words={["Building Stuff that matters", "Full Stack Developer", "Open Source Contributor"]}/>
               </div>
             </div>
           </div>
@@ -103,8 +142,14 @@ const LandingPage = () => {
             </div>
           </div> */}
           <Skills/>
-
-
+          <section>
+            <h2 className='font-bold text-3xl pl-10 pt-7 pb-1s'>Experience</h2>
+            {Experience.map((data, index)=>{
+              return <div key={index}>
+                <Card />
+              </div>
+            })}
+          </section>
         </div>
       </div>
     </>

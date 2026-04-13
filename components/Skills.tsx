@@ -13,7 +13,9 @@ import redis from '@/public/skills/redis.png'
 import tailwind from '@/public/skills/tailwind.png'
 import ts from '@/public/skills/ts.png'
 import shadcn from '@/public/skills/shadcn.svg'
-import { FaReact } from "react-icons/fa";
+import aws from '@/public/skills/aws.png'
+import vite from '@/public/skills/vite.png'
+import prisma from '@/public/skills/prisma.png'
 import {
   Tooltip,
   TooltipContent,
@@ -70,6 +72,18 @@ const Skills = () => {
             img: shadcn
         },
         {
+            name: "React Vite",
+            img: vite
+        },
+        {
+            name: "Prisma",
+            img: prisma
+        },
+        {
+            name: "AWS",
+            img: aws
+        },
+        {
             name: "Next.JS",
             img: next
         },
@@ -80,7 +94,7 @@ const Skills = () => {
         <h2 className='font-bold text-3xl pl-10 pt-7 pb-1'>Stack</h2>
         <div className="container flex flex-wrap px-7 gap-5">
             {skills.map((data, index) => {
-                return <div id='index'>
+                return <div key={index}>
                     <Tooltip>
                         <TooltipTrigger>
                             <Image src={data.img} alt={data.name} width={70}/>
