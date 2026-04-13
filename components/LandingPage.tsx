@@ -14,10 +14,11 @@ import { MdEmail } from "react-icons/md";
 import { FaCopy } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { MdArrowOutward } from "react-icons/md";
+import AboutMe from './AboutMe';
 const LandingPage = () => {
   return (
     <>
-      <div className='h-screen bg-[#08080a] flex justify-center items-center'>
+      <div className='min-h-screen bg-[#08080a] flex justify-center items-center'>
         <div className="container border-2 min-h-screen pt-14 px-32">
           <div className="top h-1/3 border flex">
             <div className="left w-2/3 border flex flex-col justify-center text-center py-3">
@@ -31,8 +32,8 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="second h-1/3 border flex mt-5">
-          <div className='left w-1/2 h-full'>
-            <div className="list flex flex-col px-3 py-3 gap-2 text-lg">
+          <div className='left w-1/2 h-full py-3'>
+            <div className="list flex flex-col px-3 py-3 pl-7 gap-7 text-md">
               <span className="code flex items-center gap-3">
                 <FaCode className='text-gray-400 font-bold bg-[#262629] rounded-sm p-1' size={27}/> Full Stack Developer
               </span>
@@ -47,15 +48,15 @@ const LandingPage = () => {
               </span>
             </div>
           </div>
-          <div className='right w-1/2 h-full'>
-          <div className="list flex flex-col px-3 py-3 gap-2 text-lg">
+          <div className='right w-1/2 h-full py-3'>
+          <div className="list flex flex-col px-3 py-3 gap-7 text-md">
                <span className="time flex items-center gap-3">
                 </span>
                <span className="time flex items-center gap-3">
                 <MdAccessTimeFilled className='text-gray-400 font-bold bg-[#262629] rounded-sm p-1' size={27}/><span >12:03 AM</span>
               </span>
               <span className="email flex items-center gap-3">
-                <MdEmail className='text-gray-400 font-bold bg-[#262629] rounded-sm p-1' size={27}/><span className='hover:underline'>aakashsaini948585@gmail.com</span><FaCopy className='hidden hover:flex'></FaCopy>
+                <MdEmail className='text-gray-400 font-bold bg-[#262629] rounded-sm p-1' size={27}/><span className='hover:underline'>aakashsaini948585@gmail.com</span><FaCopy className='hidden hover:block'></FaCopy>
               </span>
               <span className="phone flex items-center gap-3">
                 <FaPhone className='text-gray-400 font-bold bg-[#262629] rounded-sm p-1' size={27}/><span className='hover:underline'>+91-9485858534</span>
@@ -63,29 +64,34 @@ const LandingPage = () => {
             </div>
             </div>
           </div>
-          <div className="third h-1/3 border flex mt-5">
+
+          <div className='gap bg-[#0c0c11] min-h-14 w-full'></div>
+          <AboutMe/>
+          <div className='gap bg-[#0c0c11] min-h-14 w-full'></div>
+
+          <div className="third h-1/3 border flex">
             <div className="socials flex flex-wrap w-full">
-              <div className='w-1/3 flex gap-1 border'>
+              <div className='w-1/3 flex gap-1 border hover:bg-[#0c0c11]'>
                 <div className='px-1 py-3 pl-5'><Image src={discord} className='rounded-md' height={50} alt="img not found"/></div>
                 <div className='gap-16 text-xl w-full flex justify-around items-center'><span >Discord</span><MdArrowOutward/></div>
               </div>
-              <div className='w-1/3 flex gap-1 border'>
+              <div className='w-1/3 flex gap-1 border hover:bg-[#0c0c11]'>
                 <div className='px-1 py-3 pl-5'><Image src={github} className='rounded-md' height={50} alt="img not found"/></div>
                 <div className='gap-16 text-xl w-full flex justify-around items-center'><span >Github</span><MdArrowOutward/></div>
               </div>
-              <div className='w-1/3 flex gap-1 border'>
+              <div className='w-1/3 flex gap-1 border hover:bg-[#0c0c11]'>
                 <div className='px-1 py-3 pl-5'><Image src={linkedin} className='rounded-md' height={50} alt="img not found"/></div>
                 <div className='gap-16 text-xl w-full flex justify-around items-center'><span >Linkedin</span><MdArrowOutward/></div>
               </div>
-              <div className='w-1/3 flex gap-1 border'>
+              <div className='w-1/3 flex gap-1 border hover:bg-[#0c0c11]'>
                 <div className='px-1 py-3 pl-5'><Image src={discord} className='rounded-md' height={50} alt="img not found"/></div>
                 <div className='gap-16 text-xl w-full flex justify-around items-center'><span >Discord</span><MdArrowOutward/></div>
               </div>
-              <div className='w-1/3 flex gap-1 border'>
+              <div className='w-1/3 flex gap-1 border hover:bg-[#0c0c11]'>
                 <div className='px-1 py-3 pl-5'><Image src={discord} className='rounded-md' height={50} alt="img not found"/></div>
                 <div className='gap-16 text-xl w-full flex justify-around items-center'><span >Discord</span><MdArrowOutward/></div>
               </div>
-              <div className='w-1/3 flex gap-1 border'>
+              <div className='w-1/3 flex gap-1 border hover:bg-[#0c0c11]'>
                 <div className='px-1 py-3 pl-5'><Image src={discord} className='rounded-md' height={50} alt="img not found"/></div>
                 <div className='gap-16 text-xl w-full flex justify-around items-center'><span >Discord</span><MdArrowOutward/></div>
               </div>
