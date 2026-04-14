@@ -13,7 +13,7 @@ import AboutMe from './AboutMe';
 import Skills from './Skills';
 import { ContainerTextFlip } from './ui/container-text-flip';
 import bluetik from '@/public/skills/bluetik.png'
-import Card from './Card';
+import ExpCard from './ExpCard';
 const LandingPage = () => {
   const Experience = [
     {
@@ -56,7 +56,7 @@ const LandingPage = () => {
   return (
     <>
       <div className='min-h-screen bg-[#08080a] flex justify-center items-center'>
-        <div className="container min-h-screen pt-14 px-32">
+        <div className="container w-4/5 min-h-screen pt-14 px-32">
           <div className="top h-1/3 border flex">
             <div className="left w-1/3 flex justify-center items-center">
               <div className='rounded-full border-2 border-white w-fit overflow-hidden'>
@@ -146,7 +146,7 @@ const LandingPage = () => {
             <h2 className='font-bold text-3xl pl-10 pt-7 pb-1s'>Experience</h2>
             {Experience.map((data, index)=>{
               return <div key={index}>
-                <Card />
+                <ExpCard data={data}/>
               </div>
             })}
           </section>
