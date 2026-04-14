@@ -14,6 +14,7 @@ import Skills from './Skills';
 import { ContainerTextFlip } from './ui/container-text-flip';
 import bluetik from '@/public/skills/bluetik.png'
 import ExpCard from './ExpCard';
+import ProjectCard from './ProjectCard';
 const LandingPage = () => {
   const Experience = [
     {
@@ -21,7 +22,13 @@ const LandingPage = () => {
       role: "Frontend Dev Intern",
       timeline: "Apr 2024 - May 2024",
       title: "Worked as a frontend developer and build a product from scrach."
-    }
+    },
+    {
+      company: "Afame Technologies",
+      role: "Frontend Dev Intern",
+      timeline: "Apr 2024 - May 2024",
+      title: "Worked as a frontend developer and build a product from scrach."
+    },
   ]
   const project = [
     {
@@ -99,11 +106,11 @@ const LandingPage = () => {
                <span className="time flex items-center gap-3">
                 <MdAccessTimeFilled className='text-gray-400 font-bold bg-[#262629] rounded-sm p-1' size={27}/><span >12:03 AM</span>
               </span>
-              <span className="email flex items-center gap-3">
-                <MdEmail className='text-gray-400 font-bold bg-[#262629] rounded-sm p-1' size={27}/><span className='hover:underline'>aakashsaini948585@gmail.com</span><FaCopy className='hidden hover:block'></FaCopy>
+              <span className="email flex items-center gap-2 group">
+                <MdEmail className='text-gray-400 font-bold bg-[#262629] rounded-sm p-1' size={27}/><span className='hover:underline'>aakashsaini948585@gmail.com</span><FaCopy className='opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-200'></FaCopy>
               </span>
-              <span className="phone flex items-center gap-3">
-                <FaPhone className='text-gray-400 font-bold bg-[#262629] rounded-sm p-1' size={27}/><span className='hover:underline'>+91-9485858534</span>
+              <span className="phone flex items-center gap-3 group">
+                <FaPhone className='text-gray-400 font-bold bg-[#262629] rounded-sm p-1' size={27}/><span className='hover:underline'>+91-9485858534</span><FaCopy className='opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-200'></FaCopy>
               </span>
             </div>
             </div>
@@ -147,6 +154,14 @@ const LandingPage = () => {
             {Experience.map((data, index)=>{
               return <div key={index}>
                 <ExpCard data={data}/>
+              </div>
+            })}
+          </section>
+          <section>
+            <h2 className='font-bold text-3xl pl-10 pt-7 pb-1s'>Projects</h2>
+            {project.map((data, index)=>{
+              return <div key={index}>
+                <ProjectCard data={data}/>
               </div>
             })}
           </section>
