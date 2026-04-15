@@ -14,7 +14,10 @@ import Skills from './Skills';
 import { ContainerTextFlip } from './ui/container-text-flip';
 import bluetik from '@/public/skills/bluetik.png'
 import ExpCard from './ExpCard';
-import ProjectCard from './ProjectCard';
+import EducationCard from './EducationCard';
+import kuk from '@/public/rest/kuk.png'
+import csru from '@/public/rest/crsu.png'
+import hbsc from '@/public/rest/hbsc.png'
 const LandingPage = () => {
   const Experience = [
     {
@@ -36,6 +39,7 @@ const LandingPage = () => {
       tech: ["Next.js", "prisma"],
       github: "https://github.com/Silent-Shout.com",
       live: "https://silent-shout.netlify.app",
+      img: bluetik,
       des: "slfdjs"
     },
     {
@@ -43,6 +47,7 @@ const LandingPage = () => {
       tech: ["Next.js", "prisma"],
       github: "https://github.com/Silent-Shout.com",
       live: "https://silent-shout.netlify.app",
+      img: bluetik,
       des: "slfdjs"
     },
     {
@@ -50,6 +55,7 @@ const LandingPage = () => {
       tech: ["Next.js", "prisma"],
       github: "https://github.com/Silent-Shout.com",
       live: "https://silent-shout.netlify.app",
+      img: bluetik,
       des: "slfdjs"
     },
     {
@@ -57,7 +63,29 @@ const LandingPage = () => {
       tech: ["Next.js", "prisma"],
       github: "https://github.com/Silent-Shout.com",
       live: "https://silent-shout.netlify.app",
+      img: bluetik,
       des: "slfdjs"
+    },
+  ]
+
+  const Education = [
+    {
+      deg: "Masters of Computer Application (MCA)",
+      timeline: "2025 - 2027",
+      university: "Kurukshetra University, Kurukshetra  ", 
+      img: kuk
+    },
+    {
+      deg: "Batchlors of Computer Application (BCA)",
+      timeline: "2021-2024",
+      university: "Chaudhry Ranbir singh University", 
+      img: csru
+    },
+    {
+      deg: "12th Class",
+      timeline: "2019 - 2021",
+      university: "Haryana Board of School Education", 
+      img: hbsc
     },
   ]
   return (
@@ -158,10 +186,10 @@ const LandingPage = () => {
             })}
           </section>
           <section>
-            <h2 className='font-bold text-3xl pl-10 pt-7 pb-1s'>Projects</h2>
-            {project.map((data, index)=>{
+            <h2 className='font-bold text-3xl pl-10 pt-7 pb-1s'>Education</h2>
+            {Education.map((data, index)=>{
               return <div key={index}>
-                <ProjectCard data={data}/>
+                <EducationCard data={data}/>
               </div>
             })}
           </section>
