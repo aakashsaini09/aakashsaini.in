@@ -20,7 +20,7 @@ const EducationCard = ({data}: any) => {
             </Link>
           </div>
           <div className='font-bold pt-3'>
-            Live: {data.timeline}
+            {data.timeline}
           </div>
         </div>
       </div>

@@ -47,13 +47,6 @@ export default function FloatingDockDemo() {
       href: "https://drive.google.com/file/d/1tcu7PTb-uW7u8-pfg5hCnByFAIMrDNPg/view?usp=sharing",
     },
     {
-      title: "Changelog",
-      icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
       title: "Twitter",
       icon: (
         <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />

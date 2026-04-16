@@ -87,7 +87,7 @@ const LandingPage = () => {
     },
     {
       deg: "Batchlors of Computer Application (BCA)",
-      timeline: "2021-2024",
+      timeline: "2021 - 2024",
       university: "Chaudhry Ranbir singh University", 
       link: "https://crsu.ac.in/",
       img: csru
@@ -112,8 +112,12 @@ const LandingPage = () => {
             </div>
             <div className="right w-2/3  flex flex-col justify-center text-center py-3">
               <div className='flex items-center gap-2'>
-                <h1 className='font-extrabold text-5xl text-left mb-3 py-7 pl-7'>Hi, I'm Aakash</h1>
-                <Image src={bluetik} alt='img not found' className='w-14 h-14 text-center pb-1'/>
+                <h1 className='font-extrabold text-5xl text-left mb-3 pt-7 pl-7'>Hey, I'm Aakash</h1>
+              </div>
+              <div className='flex gap-1.5'>
+
+              <span className='font-bold text-xl text-left flex text-[#9b9ba3] pl-7'>@_aakashsaini</span>
+                <Image src={bluetik} alt='img not found' className='w-8 h-8 text-center pb-1'/>
               </div>
               <div className='text-xl pt-3 font-bold text-[#9b9ba3] text-left pl-7'>Hello, I love to do
                 <ContainerTextFlip words={["Building Stuff that matters", "Full Stack Developer", "Open Source Contributor"]}/>
@@ -190,7 +194,7 @@ const LandingPage = () => {
           </div> */}
           <Skills/>
           <section className='my-8'>
-            <h2 className='font-bold text-3xl pl-10 pt-7 pb-1s'>Experience</h2>
+            <h2 className='font-bold text-3xl pl-10 pt-7 pb-5 bg-[#0c0c11]'>Experience</h2>
             {Experience.map((data, index)=>{
               return <div key={index}>
                 <ExpCard data={data}/>
@@ -198,7 +202,7 @@ const LandingPage = () => {
             })}
           </section>
           <section className='my-8'>
-            <h2 className='font-bold text-3xl pl-10 pt-7 pb-1s'>Education</h2>
+            <h2 className='font-bold text-3xl pl-10 pt-7 pb-5 bg-[#0c0c11]'>Education</h2>
             {Education.map((data, index)=>{
               return <div key={index}>
                 <EducationCard data={data}/>
@@ -206,7 +210,7 @@ const LandingPage = () => {
             })}
           </section>
           <section className='my-8'>
-            <h2 className='font-bold text-3xl pl-10 pt-7 pb-1s'>Projects</h2>
+            <h2 className='font-bold text-3xl pl-10 pt-7 bg-[#0c0c11] pb-5 mb-3'>Projects</h2>
             <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-2'>
               {project.map((data, index)=>{
                 return <div key={index}>

@@ -4,7 +4,7 @@ import docker from '@/public/skills/docker.png'
 import git from '@/public/skills/git.png'
 import js from '@/public/skills/js.png'
 import mongo from '@/public/skills/mongo.png'
-import mysql from '@/public/skills/mysql.png'
+import kuber from '@/public/skills/kuber.png'
 import next from '@/public/skills/next.png'
 import node from '@/public/skills/node.png'
 import python from '@/public/skills/python.png'
@@ -58,8 +58,8 @@ const Skills = () => {
             img: mongo
         },
         {
-            name: "MySQL",
-            img: mysql
+            name: "Kubernetes",
+            img: kuber
         },
         {
             name: "Python",
