@@ -28,13 +28,13 @@ const LandingPage = () => {
       company: "Afame Technologies",
       role: "Frontend Dev Intern",
       timeline: "Apr 2024 - May 2024",
-      title: "Worked as a frontend developer and build a product from scrach."
-    },
-    {
-      company: "Afame Technologies",
-      role: "Frontend Dev Intern",
-      timeline: "Apr 2024 - May 2024",
-      title: "Worked as a frontend developer and build a product from scrach."
+      title: "Worked as a frontend developer and build a product from scrach.",
+      description: [
+              "Built 4 core UI components from scratch for a startup website",
+              "Collaborated with a senior developer to integrate features seamlessly",
+              "Worked across frontend and backend on multiple production tasks",
+              "Improved understanding of real-world full-stack workflows"
+            ]
     },
   ]
 
@@ -114,13 +114,14 @@ const LandingPage = () => {
               <div className='flex items-center gap-2'>
                 <h1 className='font-extrabold text-5xl text-left mb-3 pt-7 pl-7'>Hey, I'm Aakash</h1>
               </div>
-              <div className='flex gap-1.5'>
-
-              <span className='font-bold text-xl text-left flex text-[#9b9ba3] pl-7'>@_aakashsaini</span>
+              <div className='flex gap-1.5 items-center'>
+              <span className='font-bold text-md text-left flex text-[#9b9ba3] pl-7'>@_aakashsaini</span>
                 <Image src={bluetik} alt='img not found' className='w-8 h-8 text-center pb-1'/>
               </div>
-              <div className='text-xl pt-3 font-bold text-[#9b9ba3] text-left pl-7'>Hello, I love to do
-                <ContainerTextFlip words={["Building Stuff that matters", "Full Stack Developer", "Open Source Contributor"]}/>
+              <div className='text-md pt-3 font-bold text-left pl-7'>21 y/o • Frontend Dev • Full Stack Builder • Graduated ’25 • Persuing Master's in CS • Shipping ideas into products since 2024 ⚡
+
+
+                {/* <ContainerTextFlip words={["Building Stuff that matters", "Full Stack Developer", "Open Source Contributor"]}/> */}
               </div>
             </div>
           </div>
@@ -193,14 +194,7 @@ const LandingPage = () => {
             </div>
           </div> */}
           <Skills/>
-          <section className='my-8'>
-            <h2 className='font-bold text-3xl pl-10 pt-7 pb-5 bg-[#0c0c11]'>Experience</h2>
-            {Experience.map((data, index)=>{
-              return <div key={index}>
-                <ExpCard data={data}/>
-              </div>
-            })}
-          </section>
+          {/* Education */}
           <section className='my-8'>
             <h2 className='font-bold text-3xl pl-10 pt-7 pb-5 bg-[#0c0c11]'>Education</h2>
             {Education.map((data, index)=>{
@@ -209,6 +203,16 @@ const LandingPage = () => {
               </div>
             })}
           </section>
+          {/* Experience */}
+          <section className='my-8'>
+            <h2 className='font-bold text-3xl pl-10 pt-7 pb-5 bg-[#0c0c11]'>Experience</h2>
+            {Experience.map((data, index)=>{
+              return <div key={index}>
+                <ExpCard data={data}/>
+              </div>
+            })}
+          </section>
+          {/* Projects */}
           <section className='my-8'>
             <h2 className='font-bold text-3xl pl-10 pt-7 bg-[#0c0c11] pb-5 mb-3'>Projects</h2>
             <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-2'>

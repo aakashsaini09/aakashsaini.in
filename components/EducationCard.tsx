@@ -1,31 +1,88 @@
-import Image from 'next/image'
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
-import Link from 'next/link';
-const EducationCard = ({data}: any) => {
-      // title: "Silent Shout",
-      // tech: ["Next.js", "prisma"],
-      // github: "https://github.com/Silent-Shout.com",
-      // live: "https://silent-shout.netlify.app",
-      // img: bluetik,
-      // des: "slfdjs"
+import { BiCollapseVertical } from "react-icons/bi";
+
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+
+import { useState } from "react";
+
+type Education = {
+  img: any;
+  deg: string;
+  university: string;
+  timeline: string;
+  link?: string;
+  description?: string;
+};
+
+const EducationCard = ({ data }: { data: Education }) => {
+  const [open, setOpen] = useState(false);
+
   return (
-     <>
-      <div className='py-5 border-b hover:bg-[#0a0a0c]'>
-        <div className="row px-7 flex justify-between w-full text-md font-mono">
-          <div className='flex gap-5'>
-            <Image src={data.img} alt='Image not found' className='h-16 w-16 rounded-full' />
-            <Link href={data.link} className="flex flex-col h-full justify-center font-bold group">
-              <span className='text-white cursor-pointer flex gap-1 items-center text-left'>{data.deg} <IoIosArrowForward className='opacity-0 group-hover:opacity-100 transition-opacity duration-400'/></span>
-              <span className='text-gray-400'>{data.university}</span>
+    <div className="border-b border-white/10 hover:bg-[#0a0a0c] transition">
+      <Collapsible open={open} onOpenChange={setOpen}>
+        
+        {/* Header */}
+        <div className="px-6 py-5 flex justify-between items-start">
+
+          {/* Left */}
+          <div className="flex gap-4">
+            <Image
+              src={data.img}
+              alt="education logo"
+              className="h-14 w-14 rounded-full object-cover"
+            />
+
+            <Link
+              href={data.link || "#"}
+              target="_blank"
+              className="flex flex-col justify-center group"
+            >
+              <span className="text-white flex items-center gap-1 text-md font-medium">
+                {data.deg}
+                <IoIosArrowForward className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
+              </span>
+
+              <span className="text-gray-400 text-md">
+                {data.university}
+              </span>
             </Link>
           </div>
-          <div className='font-bold pt-3'>
-            {data.timeline}
+
+          {/* Right */}
+          <div className="flex items-center gap-4">
+            <span className="text-gray-400 text-md">
+              {data.timeline}
+            </span>
+
+            <CollapsibleTrigger asChild>
+              <button className="text-gray-400 hover:text-white transition">
+                <BiCollapseVertical
+                  className={`text-sm transition-transform duration-300 ${
+                    open ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+            </CollapsibleTrigger>
           </div>
         </div>
-      </div>
-    </>
-  )
-}
 
-export default EducationCard
+        {/* Content */}
+        <CollapsibleContent>
+          <div className="px-6 pb-5 text-xs text-gray-400 leading-relaxed">
+            {data.description || "No additional details provided."}
+          </div>
+        </CollapsibleContent>
+      </Collapsible>
+    </div>
+  );
+};
+
+export default EducationCard;
