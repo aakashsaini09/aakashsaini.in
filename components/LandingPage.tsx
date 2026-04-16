@@ -17,7 +17,7 @@ import ExpCard from './ExpCard';
 import EducationCard from './EducationCard';
 import kuk from '@/public/rest/kuk.png'
 import csru from '@/public/rest/crsu.png'
-import hbsc from '@/public/rest/hbsc.png'
+import hbsc from '@/public/rest/hbsc.webp'
 const LandingPage = () => {
   const Experience = [
     {
@@ -73,18 +73,21 @@ const LandingPage = () => {
       deg: "Masters of Computer Application (MCA)",
       timeline: "2025 - 2027",
       university: "Kurukshetra University, Kurukshetra  ", 
+      link: "https://kuk.ac.in/",
       img: kuk
     },
     {
       deg: "Batchlors of Computer Application (BCA)",
       timeline: "2021-2024",
       university: "Chaudhry Ranbir singh University", 
+      link: "https://crsu.ac.in/",
       img: csru
     },
     {
       deg: "12th Class",
       timeline: "2019 - 2021",
       university: "Haryana Board of School Education", 
+      link: "https://bseh.org.in/home/",
       img: hbsc
     },
   ]
