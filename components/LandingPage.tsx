@@ -18,6 +18,10 @@ import EducationCard from './EducationCard';
 import kuk from '@/public/rest/kuk.png'
 import csru from '@/public/rest/crsu.png'
 import hbsc from '@/public/rest/hbsc.webp'
+import ProjectCard from './ProjectCard';
+import gr from '@/public/projects/gr.png'
+import quill from '@/public/projects/quill.png'
+import ss from '@/public/projects/ss.png'
 const LandingPage = () => {
   const Experience = [
     {
@@ -33,38 +37,43 @@ const LandingPage = () => {
       title: "Worked as a frontend developer and build a product from scrach."
     },
   ]
+
   const project = [
     {
       title: "Silent Shout",
-      tech: ["Next.js", "prisma"],
+      tech: ["Next.js", "prisma", "Tailwind CSS"],
       github: "https://github.com/Silent-Shout.com",
       live: "https://silent-shout.netlify.app",
-      img: bluetik,
-      des: "slfdjs"
+      timeline: "Feb 2025- June 2025",
+      image: ss,
+      description: "Your current design direction is fine, but it can easily become boring if you don’t control these:"
+    },
+    {
+      title: "Github Roast",
+      tech: ["Next.js", "Shad-CN", "Tailwind CSS"],
+      github: "https://github.com/Silent-Shout.com",
+      live: "https://silent-shout.netlify.app",
+      timeline: "Feb 2025- June 2025",
+      image: gr,
+      description: "Your current design direction is fine, but it can easily become boring if you don’t control these:"
+    },
+    {
+      title: "Quill Vibes",
+      tech: ["React.js", "Node.js", "AWS", "Tailwind CSS"],
+      github: "https://github.com/Silent-Shout.com",
+      live: "https://silent-shout.netlify.app",
+      timeline: "Feb 2025- June 2025",
+      image: quill,
+      description: "Your current design direction is fine, but it can easily become boring if you don’t control these:"
     },
     {
       title: "Silent Shout",
-      tech: ["Next.js", "prisma"],
+      tech: ["Next.js", "prisma", "ShadCN"],
       github: "https://github.com/Silent-Shout.com",
       live: "https://silent-shout.netlify.app",
-      img: bluetik,
-      des: "slfdjs"
-    },
-    {
-      title: "Silent Shout",
-      tech: ["Next.js", "prisma"],
-      github: "https://github.com/Silent-Shout.com",
-      live: "https://silent-shout.netlify.app",
-      img: bluetik,
-      des: "slfdjs"
-    },
-    {
-      title: "Silent Shout",
-      tech: ["Next.js", "prisma"],
-      github: "https://github.com/Silent-Shout.com",
-      live: "https://silent-shout.netlify.app",
-      img: bluetik,
-      des: "slfdjs"
+      timeline: "Feb 2025- June 2025",
+      image: bluetik,
+      description: "Your current design direction is fine, but it can easily become boring if you don’t control these:"
     },
   ]
 
@@ -195,6 +204,16 @@ const LandingPage = () => {
                 <EducationCard data={data}/>
               </div>
             })}
+          </section>
+          <section className='my-8'>
+            <h2 className='font-bold text-3xl pl-10 pt-7 pb-1s'>Projects</h2>
+            <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-2'>
+              {project.map((data, index)=>{
+                return <div key={index}>
+                  <ProjectCard data={data}/>
+                </div>
+              })}
+            </div>
           </section>
         </div>
       </div>

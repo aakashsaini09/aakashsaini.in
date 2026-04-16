@@ -2,48 +2,49 @@ import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconBrandGithub,
+  IconBrandLinkedin,
   IconBrandX,
   IconExchange,
-  IconHome,
-  IconNewSection,
-  IconTerminal2,
 } from "@tabler/icons-react";
-
+import { SiGmail } from "react-icons/si";
+import { FaDiscord, FaFilePdf } from "react-icons/fa";
 export default function FloatingDockDemo() {
   const links = [
     {
-      title: "Home",
+      title: "GitHub",
       icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
+    },
+    {
+      title: "Linkedin",
+      icon: (
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://www.linkedin.com/in/-aakashsaini/",
     },
 
     {
-      title: "Products",
+      title: "Gmail",
       icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <SiGmail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
     {
-      title: "Components",
+      title: "Discode",
       icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <FaDiscord className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://discordapp.com/users/1243529310351130704",
     },
     {
-      title: "Aceternity UI",
+      title: "Resume",
       icon: (
-        <img
-          src="https://assets.aceternity.com/logo-dark.png"
-          width={20}
-          height={20}
-          alt="Aceternity Logo"
-        />
+        <FaFilePdf/>
       ),
-      href: "#",
+      href: "https://drive.google.com/file/d/1tcu7PTb-uW7u8-pfg5hCnByFAIMrDNPg/view?usp=sharing",
     },
     {
       title: "Changelog",
@@ -52,20 +53,12 @@ export default function FloatingDockDemo() {
       ),
       href: "#",
     },
-
     {
       title: "Twitter",
       icon: (
         <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
-    },
-    {
-      title: "GitHub",
-      icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
+      href: "https://x.com/__aakashsaini",
     },
   ];
   return (
