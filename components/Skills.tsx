@@ -16,6 +16,8 @@ import shadcn from '@/public/skills/shadcn.svg'
 import aws from '@/public/skills/aws.png'
 import vite from '@/public/skills/vite.png'
 import prisma from '@/public/skills/prisma.png'
+import linux from '@/public/skills/linux.png'
+import socket from '@/public/skills/socket.jpg'
 import {
   Tooltip,
   TooltipContent,
@@ -87,6 +89,14 @@ const Skills = () => {
             name: "Next.JS",
             img: next
         },
+        {
+            name: "Linux",
+            img: linux
+        },
+        {
+            name: "Socket.io",
+            img: socket
+        },
     ]
   return (
       <>
@@ -97,7 +107,7 @@ const Skills = () => {
                 return <div key={index}>
                     <Tooltip>
                         <TooltipTrigger>
-                            <Image src={data.img} alt={data.name} width={70}/>
+                            <Image src={data.img} alt={data.name} width={65} className='rounded-full text-white'/>
                         </TooltipTrigger>
                         <TooltipContent>
                             <p>{data.name}</p>

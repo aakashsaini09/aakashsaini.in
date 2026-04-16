@@ -1,12 +1,7 @@
 import Image from 'next/image'
-import React from 'react'
 import logo from '@/public/skills/afame.jpg'
 import { IoIosArrowForward } from "react-icons/io";
 const ExpCard = ({data}: any) => {
-  {/* {data.title}
-  {data.role}
-  {data.company}
-  {data.timeline} */}
   return (
     <>
       <div className='py-5 border-b hover:bg-[#0a0a0c]'>

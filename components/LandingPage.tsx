@@ -94,14 +94,14 @@ const LandingPage = () => {
   return (
     <>
       <div className='min-h-screen bg-[#08080a] flex justify-center items-center'>
-        <div className="container w-4/5 min-h-screen pt-14 px-32">
-          <div className="top h-1/3 border flex">
+        <div className="container w-4/5 min-h-screen pt-14 px-44">
+          <div className="top h-1/3  flex">
             <div className="left w-1/3 flex justify-center items-center">
-              <div className='rounded-full border-2 border-white w-fit overflow-hidden'>
+              <div className='rounded-full -2 -white w-fit overflow-hidden'>
                 <Image className='' src={profile} alt='Img not found' height={270} />
               </div>
             </div>
-            <div className="right w-2/3 border flex flex-col justify-center text-center py-3">
+            <div className="right w-2/3  flex flex-col justify-center text-center py-3">
               <div className='flex items-center gap-2'>
                 <h1 className='font-extrabold text-5xl text-left mb-3 py-7 pl-7'>Hi, I'm Aakash</h1>
                 <Image src={bluetik} alt='img not found' className='w-14 h-14 text-center pb-1'/>
@@ -113,7 +113,7 @@ const LandingPage = () => {
           </div>
 
 
-          <div className="second h-1/3 border flex mt-5">
+          <div className="second h-1/3  flex mt-5">
           <div className='left w-1/2 h-full py-3'>
             <div className="list flex flex-col px-3 py-3 pl-7 gap-7 text-md">
               <span className="code flex items-center gap-3">
@@ -151,36 +151,36 @@ const LandingPage = () => {
           <AboutMe/>
           <div className='gap bg-[#0c0c11] min-h-14 w-full'></div>
 
-          {/* <div className="third h-1/3 border flex">
+          {/* <div className="third h-1/3  flex">
             <div className="socials flex flex-wrap w-full">
-              <div className='w-1/3 flex gap-1 border hover:bg-[#0c0c11]'>
+              <div className='w-1/3 flex gap-1  hover:bg-[#0c0c11]'>
                 <div className='px-1 py-3 pl-5'><Image src={discord} className='rounded-md' height={50} alt="img not found"/></div>
                 <div className='gap-16 text-xl w-full flex justify-around items-center'><span >Discord</span><MdArrowOutward/></div>
               </div>
-              <div className='w-1/3 flex gap-1 border hover:bg-[#0c0c11]'>
+              <div className='w-1/3 flex gap-1  hover:bg-[#0c0c11]'>
                 <div className='px-1 py-3 pl-5'><Image src={github} className='rounded-md' height={50} alt="img not found"/></div>
                 <div className='gap-16 text-xl w-full flex justify-around items-center'><span >Github</span><MdArrowOutward/></div>
               </div>
-              <div className='w-1/3 flex gap-1 border hover:bg-[#0c0c11]'>
+              <div className='w-1/3 flex gap-1  hover:bg-[#0c0c11]'>
                 <div className='px-1 py-3 pl-5'><Image src={linkedin} className='rounded-md' height={50} alt="img not found"/></div>
                 <div className='gap-16 text-xl w-full flex justify-around items-center'><span >Linkedin</span><MdArrowOutward/></div>
               </div>
-              <div className='w-1/3 flex gap-1 border hover:bg-[#0c0c11]'>
+              <div className='w-1/3 flex gap-1  hover:bg-[#0c0c11]'>
                 <div className='px-1 py-3 pl-5'><Image src={discord} className='rounded-md' height={50} alt="img not found"/></div>
                 <div className='gap-16 text-xl w-full flex justify-around items-center'><span >Discord</span><MdArrowOutward/></div>
               </div>
-              <div className='w-1/3 flex gap-1 border hover:bg-[#0c0c11]'>
+              <div className='w-1/3 flex gap-1  hover:bg-[#0c0c11]'>
                 <div className='px-1 py-3 pl-5'><Image src={discord} className='rounded-md' height={50} alt="img not found"/></div>
                 <div className='gap-16 text-xl w-full flex justify-around items-center'><span >Discord</span><MdArrowOutward/></div>
               </div>
-              <div className='w-1/3 flex gap-1 border hover:bg-[#0c0c11]'>
+              <div className='w-1/3 flex gap-1  hover:bg-[#0c0c11]'>
                 <div className='px-1 py-3 pl-5'><Image src={discord} className='rounded-md' height={50} alt="img not found"/></div>
                 <div className='gap-16 text-xl w-full flex justify-around items-center'><span >Discord</span><MdArrowOutward/></div>
               </div>
             </div>
           </div> */}
           <Skills/>
-          <section>
+          <section className='my-8'>
             <h2 className='font-bold text-3xl pl-10 pt-7 pb-1s'>Experience</h2>
             {Experience.map((data, index)=>{
               return <div key={index}>
@@ -188,7 +188,7 @@ const LandingPage = () => {
               </div>
             })}
           </section>
-          <section>
+          <section className='my-8'>
             <h2 className='font-bold text-3xl pl-10 pt-7 pb-1s'>Education</h2>
             {Education.map((data, index)=>{
               return <div key={index}>
