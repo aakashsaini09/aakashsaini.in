@@ -22,6 +22,7 @@ import ProjectCard from './ProjectCard';
 import gr from '@/public/projects/gr.png'
 import quill from '@/public/projects/quill.png'
 import ss from '@/public/projects/ss.png'
+import GithubGraph from './GithubCal2';
 const LandingPage = () => {
   const Experience = [
     {
@@ -52,7 +53,7 @@ const LandingPage = () => {
       title: "Github Roast",
       tech: ["Next.js", "Shad-CN", "Tailwind CSS"],
       github: "https://github.com/Silent-Shout.com",
-      live: "https://silent-shout.netlify.app",
+      live: "https://github-war.netlify.app",
       timeline: "Feb 2025- June 2025",
       image: gr,
       description: "Your current design direction is fine, but it can easily become boring if you don’t control these:"
@@ -60,8 +61,8 @@ const LandingPage = () => {
     {
       title: "Quill Vibes",
       tech: ["React.js", "Node.js", "AWS", "Tailwind CSS"],
-      github: "https://github.com/Silent-Shout.com",
-      live: "https://silent-shout.netlify.app",
+      github: "https://github.com/aakashsaini09/QuillVibes",
+      live: "https://quill-vibes.vercel.app",
       timeline: "Feb 2025- June 2025",
       image: quill,
       description: "Your current design direction is fine, but it can easily become boring if you don’t control these:"
@@ -90,7 +91,11 @@ const LandingPage = () => {
       timeline: "2021 - 2024",
       university: "Chaudhry Ranbir singh University", 
       link: "https://crsu.ac.in/",
-      img: csru
+      img: csru,
+      description: [
+        "Lead a team of 4 students while building final year project.",
+        "Get the 3rd place in class final year."
+      ]
     },
     {
       deg: "12th Class",
@@ -223,6 +228,14 @@ const LandingPage = () => {
               })}
             </div>
           </section>
+          {/* Projects */}
+          <section className='my-8'>
+            <h2 className='font-bold text-3xl pl-10 pt-7 bg-[#0c0c11] pb-5 mb-3'>Github</h2>
+            <div className='w-full flex items-center justify-center'>
+              <GithubGraph username='aakashsaini09'/>
+            </div>
+          </section>
+          <div className='my-48'>.</div>
         </div>
       </div>
     </>

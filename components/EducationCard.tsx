@@ -19,7 +19,7 @@ type Education = {
   university: string;
   timeline: string;
   link?: string;
-  description?: string;
+  description?: string[];
 };
 
 const EducationCard = ({ data }: { data: Education }) => {
@@ -58,7 +58,7 @@ const EducationCard = ({ data }: { data: Education }) => {
 
           {/* Right */}
           <div className="flex items-center gap-4">
-            <span className="text-gray-400 text-md">
+            <span className="text-md">
               {data.timeline}
             </span>
 
@@ -77,7 +77,14 @@ const EducationCard = ({ data }: { data: Education }) => {
         {/* Content */}
         <CollapsibleContent>
           <div className="px-6 pb-5 text-xs text-gray-400 leading-relaxed">
-            {data.description || "No additional details provided."}
+            {data.description ? (<ul className="text-xs text-gray-400 leading-relaxed space-y-1">
+  {data.description.map((item: string, i: number) => (
+    <li key={i} className="flex gap-2">
+      <span>•</span>
+      <span>{item}</span>
+    </li>
+  ))}
+</ul>): "No additional details provided."}
           </div>
         </CollapsibleContent>
       </Collapsible>

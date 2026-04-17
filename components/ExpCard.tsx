@@ -51,7 +51,7 @@ const ExpCard = ({ data }: { data: Exp }) => {
 
           {/* Right */}
           <div className="flex items-center gap-4">
-            <span className="text-gray-400 text-md">
+            <span className="text-md">
               {data.timeline}
             </span>
 
