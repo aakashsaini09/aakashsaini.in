@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import Link from 'next/link';
 import profile from '@/public/p.png'
@@ -22,7 +23,11 @@ import ProjectCard from './ProjectCard';
 import gr from '@/public/projects/gr.png'
 import quill from '@/public/projects/quill.png'
 import ss from '@/public/projects/ss.png'
+import minitools from '@/public/projects/minitools.png'
+import cc from '@/public/projects/cc.png'
+import chatnest from '@/public/projects/chatnest.png'
 import GithubGraph from './GithubCal2';
+import { useEffect, useState } from 'react';
 const LandingPage = () => {
   const Experience = [
     {
@@ -43,38 +48,56 @@ const LandingPage = () => {
     {
       title: "Silent Shout",
       tech: ["Next.js", "prisma", "Tailwind CSS"],
-      github: "https://github.com/Silent-Shout.com",
+      github: "https://github.com/aakashsaini09/Silent-Shout",
       live: "https://silent-shout.netlify.app",
-      timeline: "Feb 2025- June 2025",
+      timeline: "Nov 2024 – Nov 2024",
       image: ss,
-      description: "Your current design direction is fine, but it can easily become boring if you don’t control these:"
+      description: "Share your unique URL to collect anonymous feedback effortlessly. Features include login/signup, message controls, and a feedback dashboard."
     },
     {
       title: "Github Roast",
       tech: ["Next.js", "Shad-CN", "Tailwind CSS"],
-      github: "https://github.com/Silent-Shout.com",
-      live: "https://github-war.netlify.app",
-      timeline: "Feb 2025- June 2025",
+      github: "https://github.com/aakashsaini09/github-roast",
+      live: "https://github-war.netlify.app/",
+      timeline: "Jan 2025 – Jan 2025",
       image: gr,
-      description: "Your current design direction is fine, but it can easily become boring if you don’t control these:"
+      description: "GitHub Profile Battleground. A platform where GitHub profiles are compared by AI, showcasing the coding champs and humorously trolling the underdogs."
     },
     {
       title: "Quill Vibes",
       tech: ["React.js", "Node.js", "AWS", "Tailwind CSS"],
       github: "https://github.com/aakashsaini09/QuillVibes",
       live: "https://quill-vibes.vercel.app",
-      timeline: "Feb 2025- June 2025",
+      timeline: "May 2024 – Jun 2024",
       image: quill,
-      description: "Your current design direction is fine, but it can easily become boring if you don’t control these:"
+      description: "Users can write and publish their own blogs or generate content with AI assistance. The scalable, open- source web application includes multiple features."
     },
     {
-      title: "Silent Shout",
-      tech: ["Next.js", "prisma", "ShadCN"],
-      github: "https://github.com/Silent-Shout.com",
-      live: "https://silent-shout.netlify.app",
-      timeline: "Feb 2025- June 2025",
-      image: bluetik,
-      description: "Your current design direction is fine, but it can easily become boring if you don’t control these:"
+      title: "CodeCollab",
+      tech: ["React.js", "Web-Socket", "Tailwind"],
+      github: "https://github.com/aakashsaini09/CodeCollab",
+      live: "https://coding-bros.netlify.app/",
+      timeline: "Apr 2024 – May 2024",
+      image: cc,
+      description: "Write code with your friends, create your own room or join the existing room using roomId and code together. "
+    },
+    {
+      title: "ToolsHub",
+      tech: ["TypeScript", "Web-APIs", "Tools"],
+      github: "https://github.com/aakashsaini09/ToolsHub",
+      live: "https://mini-tool.netlify.app/",
+      timeline: "Mar 2024 – Apr 2024",
+      image: minitools,
+      description: "An Open-Source platform which offers a variety of utilities designed to enhance your productivity and simplify common tasks."
+    },
+    {
+      title: "ChatNest",
+      tech: ["React-Vite", "Web-Socket", "MongoDB"],
+      github: "https://github.com/aakashsaini09/ChatNest",
+      live: "https://github.com/aakashsaini09/ChatNest",
+      timeline: "Jan 2024 - Feb 2024",
+      image: chatnest,
+      description: "A chating Application which allow users to connect with peoples. Easy to connect with Audio and Video call options."
     },
   ]
 
@@ -84,7 +107,11 @@ const LandingPage = () => {
       timeline: "2025 - 2027",
       university: "Kurukshetra University, Kurukshetra  ", 
       link: "https://kuk.ac.in/",
-      img: kuk
+      img: kuk,
+      description: [
+        "Currently pursuing MCA, focusing on core CS concepts and development skills",
+        "Actively building real-world full-stack projects"
+      ]
     },
     {
       deg: "Batchlors of Computer Application (BCA)",
@@ -102,9 +129,53 @@ const LandingPage = () => {
       timeline: "2019 - 2021",
       university: "Haryana Board of School Education", 
       link: "https://bseh.org.in/home/",
-      img: hbsc
+      img: hbsc,
+      description: [
+        "Majors: Commerce and Mathematics",
+        "Scored 90% in 12th"
+      ]
     },
   ]
+    const [time, setTime] = useState("");
+  const [offset, setOffset] = useState("");
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+
+      // 🇮🇳 Your time (IST)
+      const indiaTime = new Date(
+        now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" })
+      );
+
+      // 🌍 User's local time
+      const userTime = new Date();
+
+      // ⏱ Format IST time (NO seconds, NO am/pm)
+      const formattedTime = indiaTime.toLocaleTimeString("en-IN", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+      });
+
+      // ⏳ Calculate difference in hours
+      const diff =
+  (indiaTime.getTime() - userTime.getTime()) / (1000 * 60 * 60);
+
+const rounded = Math.floor(Math.abs(diff));
+
+let offsetText = "";
+if (diff > 0) offsetText = `${rounded}h ahead`;
+if (diff < 0) offsetText = `${rounded}h behind`;
+
+      setTime(formattedTime);
+      setOffset(offsetText);
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 60000); // update every minute
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
       <div className='min-h-screen bg-[#08080a] flex justify-center items-center'>
@@ -123,7 +194,7 @@ const LandingPage = () => {
               <span className='font-bold text-md text-left flex text-[#9b9ba3] pl-7'>@_aakashsaini</span>
                 <Image src={bluetik} alt='img not found' className='w-8 h-8 text-center pb-1'/>
               </div>
-              <div className='text-md pt-3 font-bold text-left pl-7'>21 y/o • Frontend Dev • Full Stack Builder • Graduated ’25 • Persuing Master's in CS • Shipping ideas into products since 2024 ⚡
+              <div className='text-md pt-3 font-bold text-left pl-7'>22 y/o • Full Stack Developer • CS Graduate ’24 • MCA • Building things people can actually use • Exploring DevOps & curious about Web3 ⚡
 
 
                 {/* <ContainerTextFlip words={["Building Stuff that matters", "Full Stack Developer", "Open Source Contributor"]}/> */}
@@ -154,7 +225,7 @@ const LandingPage = () => {
                <span className="time flex items-center gap-3">
                 </span>
                <span className="time flex items-center gap-3">
-                <MdAccessTimeFilled className='text-gray-400 font-bold bg-[#262629] rounded-sm p-1' size={27}/><span >12:03 AM</span>
+                <MdAccessTimeFilled className='text-gray-400 font-bold bg-[#262629] rounded-sm p-1' size={27}/><span > {time} <span className='text-gray-400'>{offset && ` // ${offset}`}</span></span>
               </span>
               <span className="email flex items-center gap-2 group">
                 <MdEmail className='text-gray-400 font-bold bg-[#262629] rounded-sm p-1' size={27}/><span className='hover:underline'>aakashsaini948585@gmail.com</span><FaCopy className='opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-200'></FaCopy>

@@ -26,24 +26,8 @@ import {
 const Skills = () => {
     const skills = [
         {
-            name: "Docker",
-            img: docker
-        },
-        {
             name: "React.JS",
             img: react
-        },
-        {
-            name: "Node.JS",
-            img: node
-        },
-        {
-            name: "Git",
-            img: git
-        },
-        {
-            name: "Redis",
-            img: redis
         },
         {
             name: "Javascript",
@@ -54,16 +38,32 @@ const Skills = () => {
             img: ts
         },
         {
+            name: "Python",
+            img: python
+        },
+        {
+            name: "Redis",
+            img: redis
+        },
+        {
+            name: "Docker",
+            img: docker
+        },
+        {
+            name: "Node.JS",
+            img: node
+        },
+        {
+            name: "Git",
+            img: git
+        },
+        {
             name: "MongoDB",
             img: mongo
         },
         {
             name: "Kubernetes",
             img: kuber
-        },
-        {
-            name: "Python",
-            img: python
         },
         {
             name: "Tailwind CSS",
@@ -78,16 +78,16 @@ const Skills = () => {
             img: vite
         },
         {
+            name: "Next.JS",
+            img: next
+        },
+        {
             name: "Prisma",
             img: prisma
         },
         {
             name: "AWS",
             img: aws
-        },
-        {
-            name: "Next.JS",
-            img: next
         },
         {
             name: "Linux",

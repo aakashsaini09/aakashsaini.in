@@ -63,7 +63,7 @@ const EducationCard = ({ data }: { data: Education }) => {
             </span>
 
             <CollapsibleTrigger asChild>
-              <button className="text-gray-400 hover:text-white transition">
+              <button className="text-gray-400 hover:text-white transition cursor-pointer">
                 <BiCollapseVertical
                   className={`text-sm transition-transform duration-300 ${
                     open ? "rotate-180" : ""

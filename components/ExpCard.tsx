@@ -56,7 +56,7 @@ const ExpCard = ({ data }: { data: Exp }) => {
             </span>
 
             <CollapsibleTrigger asChild>
-              <button className="text-gray-400 hover:text-white transition">
+              <button className="text-gray-400 hover:text-white transition cursor-pointer">
                 <BiCollapseVertical
                   className={`text-sm transition-transform duration-300 ${
                     open ? "rotate-180" : ""
@@ -69,7 +69,7 @@ const ExpCard = ({ data }: { data: Exp }) => {
 
         {/* Content */}
         <CollapsibleContent>
-          <div className="px-6 pb-5 text-sm text-gray-400 leading-relaxed">
+          <div className="px-6 pb-5 text-md text-gray-400 leading-relaxed">
             {data.description ? (
               <ul className="text-xs text-gray-400 leading-relaxed space-y-1">
   {data.description.map((item: string, i: number) => (
