@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
 import docker from '@/public/skills/docker.png'
 import git from '@/public/skills/git.png'
 import js from '@/public/skills/js.png'
@@ -98,27 +97,36 @@ const Skills = () => {
             img: socket
         },
     ]
-  return (
-      <>
-      <div className='bg-[#08080a] flex flex-col'>
-        <h2 className='font-bold text-3xl pl-10 pt-7 pb-1'>Stack</h2>
-        <div className="container flex flex-wrap px-7 gap-5">
-            {skills.map((data, index) => {
-                return <div key={index}>
-                    <Tooltip>
-                        <TooltipTrigger>
-                            <Image src={data.img} alt={data.name} width={65} className='rounded-full text-white'/>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                            <p>{data.name}</p>
-                        </TooltipContent>
-                    </Tooltip>
-                </div>
-            })}
-        </div>
-     </div>
-    </>
-  )
+ return (
+  <>
+    <div className='bg-[#08080a] flex flex-col'>
+      <h2 className='font-bold text-3xl pl-10 pt-7 pb-1'>Stack</h2>
+      <div className="flex flex-wrap justify-center items-center gap-6 px-7 py-4">
+        {skills.map((data, index) => {
+          return (
+            <div key={index} className="flex items-center justify-center">
+              <Tooltip>
+                <TooltipTrigger>
+                  <Image
+                    src={data.img}
+                    alt={data.name}
+                    loading="eager"
+                    width={65}
+                    height={65}
+                    className='rounded-full object-cover'
+                  />
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{data.name}</p>
+                </TooltipContent>
+              </Tooltip>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  </>
+)
 }
 
 export default Skills

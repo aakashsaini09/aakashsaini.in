@@ -37,6 +37,8 @@ const EducationCard = ({ data }: { data: Education }) => {
             <Image
               src={data.img}
               alt="education logo"
+              sizes="30"
+              loading="eager"
               className="h-14 w-14 rounded-full object-cover"
             />
 

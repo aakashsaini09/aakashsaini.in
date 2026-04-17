@@ -15,7 +15,7 @@ export default function FloatingDockDemo() {
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://github.com/aakashsaini09",
     },
     {
       title: "Linkedin",
@@ -30,7 +30,7 @@ export default function FloatingDockDemo() {
       icon: (
         <SiGmail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "mailto:aakashsaini948585@gmail.com",
     },
     {
       title: "Discode",
@@ -55,11 +55,11 @@ export default function FloatingDockDemo() {
     },
   ];
   return (
-    <div className="flex items-center justify-center h-140 w-full">
-      <FloatingDock
-        mobileClassName="translate-y-20" // only for demo, remove for production
-        items={links}
-      />
-    </div>
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+  <FloatingDock
+    mobileClassName="translate-y-20"
+    items={links}
+  />
+</div>
   );
 }
