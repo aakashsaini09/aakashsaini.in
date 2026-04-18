@@ -4,7 +4,6 @@ import Link from 'next/link';
 import profile from '@/public/p.png'
 import AboutMe from './AboutMe';
 import Skills from './Skills';
-import { ContainerTextFlip } from './ui/container-text-flip';
 import bluetik from '@/public/skills/bluetik.png'
 import ExpCard from './ExpCard';
 import EducationCard from './EducationCard';
