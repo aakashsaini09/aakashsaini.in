@@ -42,8 +42,8 @@ const LandingPage = () => {
     {
       title: "Silent Shout",
       tech: ["Next.js", "prisma", "Tailwind CSS"],
-      github: "[github.com](https://github.com/aakashsaini09/Silent-Shout)",
-      live: "[silent-shout.netlify.app](https://silent-shout.netlify.app)",
+      github: "https://github.com/aakashsaini09/Silent-Shout",
+      live: "https://silent-shout.netlify.app",
       timeline: "Nov 2024 – Nov 2024",
       image: ss,
       description: "Share your unique URL to collect anonymous feedback effortlessly. Features include login/signup, message controls, and a feedback dashboard."
@@ -51,8 +51,8 @@ const LandingPage = () => {
     {
       title: "Github Roast",
       tech: ["Next.js", "Shad-CN", "Tailwind CSS"],
-      github: "[github.com](https://github.com/aakashsaini09/github-roast)",
-      live: "[github-war.netlify.app](https://github-war.netlify.app/)",
+      github: "https://github.com/aakashsaini09/github-roast",
+      live: "https://github-war.netlify.app",
       timeline: "Jan 2025 – Jan 2025",
       image: gr,
       description: "GitHub Profile Battleground. A platform where GitHub profiles are compared by AI, showcasing the coding champs and humorously trolling the underdogs."
@@ -60,8 +60,8 @@ const LandingPage = () => {
     {
       title: "Quill Vibes",
       tech: ["React.js", "Node.js", "AWS", "Tailwind CSS"],
-      github: "[github.com](https://github.com/aakashsaini09/QuillVibes)",
-      live: "[quill-vibes.vercel.app](https://quill-vibes.vercel.app)",
+      github: "https://github.com/aakashsaini09/QuillVibes",
+      live: "https://quill-vibes.vercel.app",
       timeline: "May 2024 – Jun 2024",
       image: quill,
       description: "Users can write and publish their own blogs or generate content with AI assistance. The scalable, open- source web application includes multiple features."
@@ -69,8 +69,8 @@ const LandingPage = () => {
     {
       title: "CodeCollab",
       tech: ["React.js", "Web-Socket", "Tailwind"],
-      github: "[github.com](https://github.com/aakashsaini09/CodeCollab)",
-      live: "[coding-bros.netlify.app](https://coding-bros.netlify.app/)",
+      github: "https://github.com/aakashsaini09/CodeCollab",
+      live: "https://coding-bros.netlify.app",
       timeline: "Apr 2024 – May 2024",
       image: cc,
       description: "Write code with your friends, create your own room or join the existing room using roomId and code together. "
@@ -78,8 +78,8 @@ const LandingPage = () => {
     {
       title: "ToolsHub",
       tech: ["TypeScript", "Web-APIs", "Tools"],
-      github: "[github.com](https://github.com/aakashsaini09/ToolsHub)",
-      live: "[mini-tool.netlify.app](https://mini-tool.netlify.app/)",
+      github: "https://github.com/aakashsaini09/ToolsHub",
+      live: "https://mini-tool.netlify.app",
       timeline: "Mar 2024 – Apr 2024",
       image: minitools,
       description: "An Open-Source platform which offers a variety of utilities designed to enhance your productivity and simplify common tasks."
@@ -87,8 +87,8 @@ const LandingPage = () => {
     {
       title: "ChatNest",
       tech: ["React-Vite", "Web-Socket", "MongoDB"],
-      github: "[github.com](https://github.com/aakashsaini09/ChatNest)",
-      live: "[github.com](https://github.com/aakashsaini09/ChatNest)",
+      github: "https://github.com/aakashsaini09/ChatNest",
+      live: "https://github.com/aakashsaini09/ChatNest",
       timeline: "Jan 2024 - Feb 2024",
       image: chatnest,
       description: "A chating Application which allow users to connect with peoples. Easy to connect with Audio and Video call options."
