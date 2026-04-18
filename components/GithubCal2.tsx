@@ -46,19 +46,21 @@ export default function GithubGraph({ username }: { username: string }) {
   const total = filtered.reduce((sum, d) => sum + d.count, 0);
   const { currentStreak, longestStreak } = calculateStreaks(filtered);
 
-  // Scale graph to fit container — no overflow, no scrollbar
-  useEffect(() => {
-    const update = () => {
-      if (!graphRef.current) return;
-      const containerWidth = graphRef.current.offsetWidth;
-      const graphWidth = weeks.length * (12 + 4); // w-3 = 12px, gap-[4px] = 4px
-      setScale(Math.min(1, containerWidth / graphWidth));
-    };
+// Replace scale state and useEffect with this:
+const [zoom, setZoom] = useState(1);
 
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, [weeks]);
+useEffect(() => {
+  const update = () => {
+    if (!graphRef.current) return;
+    const containerWidth = graphRef.current.offsetWidth;
+    const graphWidth = weeks.length * 16; // 12px cell + 4px gap
+    setZoom(Math.min(1, containerWidth / graphWidth));
+  };
+
+  update();
+  window.addEventListener("resize", update);
+  return () => window.removeEventListener("resize", update);
+}, [weeks]);
 
   return (
     <div className="border border-white/10 rounded-xl p-4 bg-black">
@@ -72,43 +74,38 @@ export default function GithubGraph({ username }: { username: string }) {
         </div>
       </div>
 
-      {/* Graph — ref measures available width */}
-      <div ref={graphRef} className="w-full overflow-hidden">
-        <div
-          className="origin-top-left"
-          style={{
-            transform: `scale(${scale})`,
-            width: scale < 1 ? `${100 / scale}%` : "100%",
-            transformOrigin: "top left",
-          }}
-        >
-          {/* Month Labels */}
-          <div className="flex gap-[4px] mb-2 ml-6">
-            {monthLabels.map((m, i) => (
-              <div key={i} className="w-3 text-[10px] text-gray-500">
-                {m}
-              </div>
-            ))}
-          </div>
+     {/* Graph — ref measures available width */}
+<div ref={graphRef} className="w-full overflow-hidden">
+  <div style={{ zoom }}>
 
-          {/* Grid */}
-          <div className="flex gap-[4px]">
-            {weeks.map((week, i) => (
-              <div key={i} className="flex flex-col gap-[4px]">
-                {week.map((day, j) => (
-                  <div
-                    key={j}
-                    title={`${day.date} • ${day.count} contributions`}
-                    className={`w-3 h-3 rounded-sm ${getColor(
-                      day.level
-                    )} transform-gpu hover:scale-125 transition-transform duration-150`}
-                  />
-                ))}
-              </div>
-            ))}
-          </div>
+    {/* Month Labels */}
+    <div className="flex gap-[4px] mb-2 ml-6">
+      {monthLabels.map((m, i) => (
+        <div key={i} className="w-3 text-[10px] text-gray-500">
+          {m}
         </div>
-      </div>
+      ))}
+    </div>
+
+    {/* Grid */}
+    <div className="flex gap-[4px]">
+      {weeks.map((week, i) => (
+        <div key={i} className="flex flex-col gap-[4px]">
+          {week.map((day, j) => (
+            <div
+              key={j}
+              title={`${day.date} • ${day.count} contributions`}
+              className={`w-3 h-3 rounded-sm ${getColor(
+                day.level
+              )} transform-gpu hover:scale-125 transition-transform duration-150`}
+            />
+          ))}
+        </div>
+      ))}
+    </div>
+
+  </div>
+</div>
 
       {/* Legend */}
       <div className="flex items-center justify-end gap-2 mt-4 text-[10px] text-gray-500">
@@ -123,15 +120,15 @@ export default function GithubGraph({ username }: { username: string }) {
 
       {/* Stats Footer */}
       <div className="mt-6 pt-4 border-t border-white/10 flex justify-between text-xs text-gray-400">
-        <div className="flex flex-col text-xl">
+        <div className="flex flex-col text-sm md:text-xl">
           <span className="text-white font-semibold">{total}</span>
           <span>Total Contributions</span>
         </div>
-        <div className="flex flex-col text-center text-xl">
+        <div className="flex flex-col text-center text-sm md:text-xl">
           <span className="text-white font-semibold">{currentStreak}d</span>
           <span>Current Streak</span>
         </div>
-        <div className="flex flex-col text-right text-xl">
+        <div className="flex flex-col text-right text-sm md:text-xl">
           <span className="text-white font-semibold">{longestStreak}d</span>
           <span>Longest Streak</span>
         </div>

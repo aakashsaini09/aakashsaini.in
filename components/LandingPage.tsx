@@ -231,9 +231,9 @@ const LandingPage = () => {
             <h2 className='font-bold text-2xl sm:text-3xl pl-4 sm:pl-10 pt-5 sm:pt-7 bg-[#0c0c11] pb-4 sm:pb-5 mb-3'>
               Github
             </h2>
-            <div className='w-full flex items-center justify-center px-4'>
-              <GithubGraph username='aakashsaini09' />
-            </div>
+            <div className='w-full px-4'>
+  <GithubGraph username='aakashsaini09' />
+</div>
           </section>
 
           <section>

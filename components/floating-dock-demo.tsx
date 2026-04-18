@@ -55,11 +55,9 @@ export default function FloatingDockDemo() {
     },
   ];
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
   <FloatingDock
-    mobileClassName="translate-y-20"
+    mobileClassName="translate-y-0"
     items={links}
   />
-</div>
-  );
+);
 }
