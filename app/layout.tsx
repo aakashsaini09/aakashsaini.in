@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 const jetBrainMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
@@ -31,6 +32,19 @@ export default function RootLayout({
             disableTransitionOnChange>
               <TooltipProvider>
                 {children}
+ <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-TVZVQY6R7F"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TVZVQY6R7F');
+          `}
+        </Script>
                   <Toaster />
               </TooltipProvider>
           </ThemeProvider>
