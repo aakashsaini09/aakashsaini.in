@@ -4,7 +4,6 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandX,
-  IconExchange,
 } from "@tabler/icons-react";
 import { SiGmail } from "react-icons/si";
 import { FaDiscord, FaFilePdf } from "react-icons/fa";
@@ -13,14 +12,14 @@ export default function FloatingDockDemo() {
     {
       title: "GitHub",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" target="_blank" />
       ),
       href: "https://github.com/aakashsaini09",
     },
     {
       title: "Linkedin",
       icon: (
-        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" target="_blank" />
       ),
       href: "https://www.linkedin.com/in/-aakashsaini/",
     },
@@ -28,28 +27,28 @@ export default function FloatingDockDemo() {
     {
       title: "Gmail",
       icon: (
-        <SiGmail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <SiGmail className="h-full w-full text-neutral-500 dark:text-neutral-300" target="_blank" />
       ),
       href: "mailto:aakashsaini948585@gmail.com",
     },
     {
       title: "Discode",
       icon: (
-        <FaDiscord className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <FaDiscord className="h-full w-full text-neutral-500 dark:text-neutral-300" target="_blank"/>
       ),
       href: "https://discordapp.com/users/1243529310351130704",
     },
     {
       title: "Resume",
       icon: (
-        <FaFilePdf/>
+        <FaFilePdf className="h-full w-full text-neutral-500 dark:text-neutral-300" target="_blank"/>
       ),
-      href: "https://drive.google.com/file/d/1tcu7PTb-uW7u8-pfg5hCnByFAIMrDNPg/view?usp=sharing",
+      href: "https://drive.google.com/file/d/1G3WvY1OVtgoedlj6Ti6PRXXM8vPyIUp5/view?usp=sharing",
     },
     {
       title: "Twitter",
       icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" target="_blank" />
       ),
       href: "https://x.com/__aakashsaini",
     },

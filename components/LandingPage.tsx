@@ -100,7 +100,7 @@ const LandingPage = () => {
       deg: "Masters of Computer Application (MCA)",
       timeline: "2025 - 2027",
       university: "Kurukshetra University, Kurukshetra  ",
-      link: "[kuk.ac.in](https://kuk.ac.in/)",
+      link: "https://kuk.ac.in",
       img: kuk,
       description: [
         "Currently pursuing MCA, focusing on core CS concepts and development skills",
@@ -111,7 +111,7 @@ const LandingPage = () => {
       deg: "Batchlors of Computer Application (BCA)",
       timeline: "2021 - 2024",
       university: "Chaudhry Ranbir singh University",
-      link: "[crsu.ac.in](https://crsu.ac.in/)",
+      link: "https://crsu.ac.in",
       img: csru,
       description: [
         "Lead a team of 4 students while building final year project.",
@@ -122,7 +122,7 @@ const LandingPage = () => {
       deg: "12th Class",
       timeline: "2019 - 2021",
       university: "Haryana Board of School Education",
-      link: "[bseh.org.in](https://bseh.org.in/home/)",
+      link: "https://bseh.org.in/home",
       img: hbsc,
       description: [
         "Majors: Commerce and Mathematics",

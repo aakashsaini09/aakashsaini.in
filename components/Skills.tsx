@@ -113,7 +113,7 @@ const Skills = () => {
                     loading="eager"
                     width={65}
                     height={65}
-                    className='rounded-full object-cover'
+                    className='rounded-full object-cover cursor-pointer'
                   />
                 </TooltipTrigger>
                 <TooltipContent>

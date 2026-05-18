@@ -52,7 +52,7 @@ const EducationCard = ({ data }: { data: Education }) => {
                 <IoIosArrowForward className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
               </span>
 
-              <span className="text-gray-400 text-md">
+              <span className="text-gray-400 sm:text-sm md:text-md">
                 {data.university}
               </span>
             </Link>
@@ -60,7 +60,7 @@ const EducationCard = ({ data }: { data: Education }) => {
 
           {/* Right */}
           <div className="flex items-center gap-4">
-            <span className="text-md">
+            <span className="sm:text-sm md:text-md">
               {data.timeline}
             </span>
 
