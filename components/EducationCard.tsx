@@ -47,12 +47,12 @@ const EducationCard = ({ data }: { data: Education }) => {
               target="_blank"
               className="flex flex-col justify-center group"
             >
-              <span className="text-white flex items-center gap-1 text-md font-medium">
+              <span className=" flex items-center gap-1 text-white text-sm md:text-xl font-medium">
                 {data.deg}
                 <IoIosArrowForward className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
               </span>
 
-              <span className="text-gray-400 sm:text-sm md:text-md">
+              <span className="text-gray-400 text-sm md:text-md">
                 {data.university}
               </span>
             </Link>
@@ -60,7 +60,7 @@ const EducationCard = ({ data }: { data: Education }) => {
 
           {/* Right */}
           <div className="flex items-center gap-4">
-            <span className="sm:text-sm md:text-md">
+            <span className="text-sm md:text-md flex">
               {data.timeline}
             </span>
 

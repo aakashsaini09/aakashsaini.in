@@ -41,11 +41,11 @@ const ExpCard = ({ data }: { data: Exp }) => {
             />
 
             <div className="flex flex-col justify-center group">
-              <span className="text-white flex items-center gap-1 font-medium">
+              <span className="text-white flex text-sm md:text-xl items-center gap-1 font-medium">
                 {data.company}
                 <IoIosArrowForward className="opacity-0 group-hover:opacity-100 transition-all duration-200" />
               </span>
-              <span className="text-gray-400 text-md">
+              <span className="text-gray-400  text-sm md:text-md">
                 {data.role}
               </span>
             </div>
