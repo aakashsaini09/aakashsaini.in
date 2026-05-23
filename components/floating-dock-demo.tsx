@@ -43,7 +43,7 @@ export default function FloatingDockDemo() {
       icon: (
         <FaFilePdf className="h-full w-full text-neutral-500 dark:text-neutral-300" target="_blank"/>
       ),
-      href: "https://drive.google.com/file/d/1G3WvY1OVtgoedlj6Ti6PRXXM8vPyIUp5/view?usp=sharing",
+      href: "https://drive.google.com/file/d/1eYmxcPSqOQQSQhYGS6Jh94akawrg4LpH/view?usp=sharing",
     },
     {
       title: "Twitter",
