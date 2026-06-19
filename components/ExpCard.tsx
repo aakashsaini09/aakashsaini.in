@@ -45,15 +45,15 @@ const ExpCard = ({ data }: { data: Exp }) => {
                 {data.company}
                 <IoIosArrowForward className="opacity-0 group-hover:opacity-100 transition-all duration-200" />
               </span>
-              <span className="text-gray-400  text-sm md:text-md">
+              <span className="text-gray-400 text-xs md:text-md">
                 {data.role}
               </span>
             </div>
           </div>
 
           {/* Right */}
-          <div className="flex items-center gap-4">
-            <span className="text-md">
+          <div className="flex items-center py-4">
+            <span className="text-xs md:text-md whitespace-nowrap overflow-hidden tracking-tight">
               {data.timeline}
             </span>
 

@@ -13,12 +13,13 @@ import hbsc from '@/public/rest/hbsc.webp'
 import ProjectCard from './ProjectCard';
 import gr from '@/public/projects/gr.png'
 import quill from '@/public/projects/quill.png'
+import su from '@/public/projects/speakup.png'
 import ss from '@/public/projects/ss.png'
 import minitools from '@/public/projects/minitools.png'
 import cc from '@/public/projects/cc.png'
 import chatnest from '@/public/projects/chatnest.png'
 import GithubGraph from './GithubCal2';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ContactSection from './Contact';
 import Information from './Information';
 
@@ -39,6 +40,15 @@ const LandingPage = () => {
   ]
 
   const project = [
+    {
+      title: "SpeakUp",
+      tech: ["Next.js", "webRTC", "Socket.IO", "Node.js"],
+      github: "https://github.com/aakashsaini09/Speak-up",
+      live: "https://speak-up.online",
+      timeline: "May 2026 – June 2026",
+      image: su,
+      description: "A real-time English practice platform where users can create voice rooms, connect with people worldwide, and improve their speaking skills through live conversations."
+    },
     {
       title: "Silent Shout",
       tech: ["Next.js", "prisma", "Tailwind CSS"],
@@ -139,7 +149,7 @@ const LandingPage = () => {
   return (
     <>
       <div className='min-h-screen bg-[#08080a] flex justify-center items-center'>
-        <div className="container w-full px-4 sm:w-11/12 md:w-4/5 min-h-screen pt-8 sm:pt-14 md:px-10 lg:px-44">
+        <div className="container w-full sm:px-4 sm:w-11/12 md:w-4/5 min-h-screen pt-8 sm:pt-14 md:px-10 lg:px-44">
           
           {/* Hero Section */}
           <div className="top flex flex-col md:flex-row items-center md:items-start">

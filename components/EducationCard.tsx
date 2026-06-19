@@ -52,15 +52,15 @@ const EducationCard = ({ data }: { data: Education }) => {
                 <IoIosArrowForward className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
               </span>
 
-              <span className="text-gray-400 text-sm md:text-md">
+              <span className="text-gray-400 text-xs md:text-md">
                 {data.university}
               </span>
             </Link>
           </div>
 
           {/* Right */}
-          <div className="flex items-center gap-4">
-            <span className="text-sm md:text-md flex">
+          <div className="flex items-center item-center py-5">
+            <span className="text-xs md:text-md whitespace-nowrap overflow-hidden text-ellipsis">
               {data.timeline}
             </span>
 
