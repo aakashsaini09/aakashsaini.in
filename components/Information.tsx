@@ -69,7 +69,7 @@ const Information = () => {
                 </span>
                 <span className="web flex items-center gap-3">
                   <FaLink className='text-gray-400 font-bold bg-[#262629] rounded-sm p-1 shrink-0' size={27} />
-                  <Link href={'[aakashsaini.in](https://aakashsaini.in)'} target='_blank' className='hover:underline'>
+                  <Link href={'https://aakashsaini.in'} target='_blank' className='hover:underline'>
                     aakashsaini.in
                   </Link>
                 </span>

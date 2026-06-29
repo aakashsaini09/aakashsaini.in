@@ -19,7 +19,7 @@ type ProjectCardProps = {
 export default function ProjectCard({ data }: ProjectCardProps) {
   const { image, title, timeline, description, tech = [], live, github } = data;
   return (
-    <div className="group border border-white/10 rounded-2xl overflow-hidden bg-black hover:border-white/30 transition-all duration-300">
+    <div className="group rounded-2xl overflow-hidden bg-black hover:border hover:border-purple-700 transition-all duration-300">
       <div className="relative w-full h-48 overflow-hidden">
         <Image
           src={image}
@@ -34,12 +34,12 @@ export default function ProjectCard({ data }: ProjectCardProps) {
 
         {/* Title + Arrow */}
         <div className="flex items-center justify-between">
-          <h3 className="text-white text-lg font-medium flex items-center gap-2">
+          <Link href={live || ''} className="text-white text-lg font-medium flex items-center gap-2">
             {title}
             <span className="opacity-0 group-hover:opacity-100 -translate-x-1.5 group-hover:translate-x-0 transition-all duration-300">
               <IoIosArrowForward />
             </span>
-          </h3>
+          </Link>
           <div className="flex items-center gap-3 text-gray-400">
             {github && (
               <Link href={github} target="_blank">
@@ -63,7 +63,7 @@ export default function ProjectCard({ data }: ProjectCardProps) {
   {Array.isArray(tech) &&
     tech.map((item, index) => (
       <span
-        key={index} className="text-xs border border-white/10 px-2 py-1 rounded-md text-gray-400 hover:text-white hover:border-white/30 transition">
+        key={index} className="text-xs border border-white/10 px-2 bg-gray-200 py-1 rounded-md text-black hover:text-gray-900 hover:border-white/30 transition">
         {item}
       </span>
     ))}
