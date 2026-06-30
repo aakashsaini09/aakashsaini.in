@@ -19,7 +19,7 @@ type ProjectCardProps = {
 export default function ProjectCard({ data }: ProjectCardProps) {
   const { image, title, timeline, description, tech = [], live, github } = data;
   return (
-    <div className="group rounded-2xl overflow-hidden bg-black hover:border hover:border-purple-700 transition-all duration-300">
+    <div className="group rounded-xl overflow-hidden bg-black hover:border hover:border-purple-700 transition-all duration-300">
       <div className="relative w-full h-48 overflow-hidden">
         <Image
           src={image}
@@ -63,7 +63,7 @@ export default function ProjectCard({ data }: ProjectCardProps) {
   {Array.isArray(tech) &&
     tech.map((item, index) => (
       <span
-        key={index} className="text-xs border border-white/10 px-2 bg-gray-200 py-1 rounded-md text-black hover:text-gray-900 hover:border-white/30 transition">
+        key={index} className="text-xs border border-white/10 px-2 bg-gray-300 py-1 rounded-md text-black hover:text-gray-900 hover:border-white/30 transition">
         {item}
       </span>
     ))}

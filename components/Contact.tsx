@@ -7,7 +7,7 @@ export default function ContactSection() {
       <div className="max-w-2xl mx-auto text-center flex flex-col items-center gap-6">
 
         {/* Badge */}
-        <span className="bg-white text-black text-xs px-3 py-1 rounded-full">
+        <span className="bg-gray-300 text-black text-xs px-3 py-1 rounded-full">
           Contact
         </span>
 

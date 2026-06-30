@@ -16,7 +16,7 @@ import aws from '@/public/skills/aws.png'
 import vite from '@/public/skills/vite.png'
 import prisma from '@/public/skills/prisma.png'
 import linux from '@/public/skills/linux.png'
-import socket from '@/public/skills/socket.jpg'
+import socket from '@/public/skills/socket.svg'
 import {
   Tooltip,
   TooltipContent,
@@ -101,7 +101,7 @@ const Skills = () => {
   <>
     <div className='bg-[#08080a] flex flex-col'>
       <h2 className='font-bold text-3xl pl-10 pt-7 pb-1'>Stack</h2>
-      <div className="flex flex-wrap justify-center items-center gap-6 px-7 py-4">
+      <div className="grid grid-cols-3 md:flex md:flex-wrap justify-center items-center gap-6 px-7 py-4">
         {skills.map((data, index) => {
           return (
             <div key={index} className="flex items-center justify-center">

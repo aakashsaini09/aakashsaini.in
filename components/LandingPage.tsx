@@ -154,7 +154,7 @@ const LandingPage = () => {
           {/* Hero Section */}
           <div className="top flex flex-col md:flex-row items-center md:items-start">
             <div className="left w-full md:w-1/3 flex justify-center items-center mb-6 md:mb-0">
-              <div className='rounded-full w-fit overflow-hidden'>
+              <div className='rounded-full w-fit overflow-hidden border border-purple-700'>
                 <Image 
                   className='' 
                   src={profile} 
@@ -227,7 +227,7 @@ const LandingPage = () => {
               <div className="flex justify-center mt-6">
                 <button
                   onClick={() => setShowAll(!showAll)}
-                  className="text-sm text-gray-800 hover:text-black bg-white cursor-pointer font-bold border border-white/10 px-4 py-2 rounded-md transition hover:border-white/30"
+                  className="text-sm text-gray-800 hover:text-black bg-white cursor-pointer font-bold border border-purple-700 px-4 py-2 rounded-md transition hover:border-purple-800"
                 >
                   {showAll ? "Show Less" : "Show More"}
                 </button>
