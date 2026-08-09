@@ -22,13 +22,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jetBrainMono.variable} h-full antialiased`}
+      className={`${jetBrainMono.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col">
          <ThemeProvider
             attribute="class"
-            defaultTheme="system"
-            enableSystem
+            defaultTheme="dark"
             disableTransitionOnChange>
               <TooltipProvider>
                 {children}
